@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Alphabet Button Selection</title>
+  </head>
+  <body>
+    <form id="myLetter">
+      <input type="radio" name="letter" id="a" > A<br>
+      <input type="radio" name="letter" id="b"> B<br>
+      <input type="radio" name="letter" id="c"> C<br>
+      <input type="radio" name="letter" id="d"> D<br><br>
+      <button onClick="windowForLetter()"> Press ME!</button>
+    </form>
+
+    <script type= "text/javascript">
+    function windowForLetter() {
+      var newWindow = window.open ("", "","width=300,height=300");
+      var letter_a = document.getElementById("a").checked;
+      var letter_b = document.getElementById("b").checked;
+      var letter_c = document.getElementById("c").checked;
+
+
+      if (letter_a == true) {
+        letter_choice = "A"
+      } else if (letter_b == true){
+        letter_choice = "B"
+      } else if (letter_c == true){
+        letter_choice = "C"
+      } else {
+        letter_choice = "D"
+      }
+
+      newWindow.document.write(letter_choice);
+    }
+    </script>
+  </body>
+</html>
